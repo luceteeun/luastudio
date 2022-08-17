@@ -1,0 +1,1700 @@
+@import url(./fonts.css);
+@import url(./reset.css);
+
+#wrap {
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    #header {
+        z-index:3;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:80px;
+        background:#fff;
+        box-shadow:0 3px 15px rgba(0,0,0,.1);
+        transition:all .3s ease-in-out;
+        .container {
+            max-width:1730px;
+            width:100%;
+            // width:90.90909090909091%;
+            height:100%;
+            margin:0 auto;
+            .gap {
+                width:100%;
+                height:100%;
+                margin:0;
+                .wrap {
+                    width:100%;
+                    height:100%;
+                    display:flex;
+                    #logo {
+                        width:150px;
+                        height:50px;
+                        margin:auto auto auto 0;
+                        h1 {
+                            width:100%;
+                            position:relative;
+                            img {
+                                width:100%;
+                                &.default-logo {position:relative;z-index:2;display:block;}
+                                &.white-logo {position:absolute;z-index:3;top:0;left:-1.05px;display:none;}
+                            }
+                        }
+                    }
+                    #nav {
+                        width:500px;
+                        height:100%;
+                        margin:auto 0 auto auto;
+                        > ul {
+                            width:100%;
+                            height:100%;
+                            display:flex;
+                            > li {
+                                font-family:'Poppins';
+                                width:33.333%;
+                                height:100%;
+                                text-align:center;
+                                position:relative;
+                                display:flex;
+                                > a {
+                                    display:inline-block;
+                                    margin:auto;
+                                    color:#555;
+                                    font-size:14px;
+                                    font-weight:600;
+                                    padding-bottom:4px;
+                                    position:relative;
+                                    transition:all .3s;
+                                    &:after {
+                                        content:'';
+                                        position:absolute;
+                                        bottom:0;
+                                        left:0;
+                                        width:0;
+                                        height:1.7px;
+                                        background:rgb(255, 81, 81);
+                                    }
+                                    &:hover {
+                                        color:#000;
+                                        &:after {animation:bottomBar .3s forwards ease-out;}
+                                        @keyframes bottomBar {
+                                            0% {width:0;}
+                                          100% {width:100%;}
+                                        }
+                                    }
+                                    &.on {
+                                        color:#000;
+                                        &:after {animation:bottomBar .3s forwards ease-out;}
+                                        @keyframes bottomBar {
+                                            0% {width:0;}
+                                          100% {width:100%;}
+                                        }
+                                    }
+                                }
+                                .sub {
+                                    &.sub1 {left:40px;display:none;}
+                                    &.sub2 {left:25px;display:none;}
+
+                                    width:180px;
+                                    height:auto;
+                                    background:rgb(22, 19, 41);
+                                    box-shadow:0 3px 6px rgba(0,0,0, 0.15);
+                                    position:absolute;
+                                    top:80px;
+                                    .sub-gap {
+
+                                        ul {
+                                            padding:20px;
+                                            li {
+                                                width:100%;
+                                                line-height:30px;
+                                                text-align:left;
+                                                position:relative;
+                                                display:flex;
+                                                > a {
+                                                    display:block;
+                                                    width:100%;
+                                                    span {
+                                                        display:block;
+                                                        font-size:12px;
+                                                        font-weight:400;
+                                                        color:#aaaaaa;
+                                                        transition:all .3s ease-in-out;
+                                                        &:after {
+                                                            content:'\2023';
+                                                            font-size:9px;
+                                                            font-weight:500;
+                                                            color:#aaaaaa;
+                                                            position:absolute;
+                                                            top:0;
+                                                            margin-top:-1px;
+                                                            right:5px;
+                                                            transition:all .3s ease-in-out;
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        span {
+                                                            margin-left:5px;
+                                                            color:#fff;
+                                                            &:after {right:-3px;color:#fff;}
+                                                        }
+                                                    }
+                                                }
+                                                .sub-sub {
+                                                    display:none;
+                                                    width:160px;
+                                                    position:absolute;
+                                                    top:-20px;
+                                                    left:162px;
+                                                    background:rgb(22, 19, 41);
+                                                    box-shadow:0 3px 6px rgba(0,0,0, 0.15);
+                                                    dl {
+                                                        padding:20px;
+                                                        dd {
+                                                            width:100%;
+                                                            line-height:30px;
+                                                            text-align:left;
+                                                            position:relative;
+                                                            a {
+                                                                display:block;
+                                                                width:100%;
+                                                                span {
+                                                                    display:block;
+                                                                    font-size:12px;
+                                                                    font-weight:400;
+                                                                    color:#aaa;
+                                                                    transition:all .3s ease-in-out;
+                                                                }
+                                                                &:hover {
+                                                                    span {
+                                                                        color:#fff;
+                                                                        margin-left:5px;
+                                                                    }  
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #aside {
+                        width:auto;
+                        height:100%;
+                        display:flex;
+                        span {
+                            width:100%;
+                            height:30px;
+                            margin:auto 0;
+                            a {
+                                width:auto;
+                                height:100%;
+                                margin:0 15px;
+                                i {
+                                    font-size:15px;
+                                    font-weight:500;
+                                    line-height:30px;
+                                    margin-top:-2px;
+                                    color:rgb(30, 26, 56);
+                                    transition:all .3s;
+                                }
+                                &:hover {
+                                    i {color:rgb(255, 81, 81);}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.hide {
+            top:-80px;
+        }
+        &.show {
+            top:0;
+            height:60px;
+            background:rgb(22, 19, 41);
+            .container {
+                .gap {
+                    .wrap {
+                        #logo {
+                            h1 {
+                                img {
+                                    width:100%;
+                                    &.default-logo {display:none;}
+                                    &.white-logo {display:block;}
+                                }
+                            }
+                        }
+                        #nav {
+                            > ul {
+                                > li {
+                                    > a {
+                                        color:#fff;font-weight:400;
+                                        &:hover {
+                                            &:after {
+                                                height:1.7px;
+                                                background:rgb(255, 81, 81);
+                                            }
+                                        }
+                                    }
+                                    .sub {top:60px;}
+                                }
+                            }
+                        }
+                        #aside {
+                            span {
+                                a {
+                                    i {color:#fff;font-weight:300;}
+                                    &:hover {
+                                        i {color:rgb(255, 81, 81);}  
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    #main {
+        z-index:2;
+        position:relative;
+        width:100%;
+        #section1 {
+            width:100%;
+            background:#fff;
+            .container {
+                width:100%;
+                margin:0 auto;
+                .gap {
+                    width:100%;
+                    .wrap {
+                        width:100%;
+                        display:flex;
+                       .left {
+                        width:19.60063058328954%;
+                        display:flex;
+                        cursor:url(../images/mouse_cursor_point_red.png),move;
+                        > ul {
+                            width:100px;
+                            margin:auto auto auto 23.19034852546917%; //86.5px
+                            > li {
+                                width:100%;
+                                line-height:40px;
+                                a {
+                                    display:block;
+                                    position:relative;
+                                    cursor:url(../images/mouse_cursor_point_red.png),move;
+                                    span {
+                                     font-size:14px;
+                                     font-weight:500;
+                                     color:#bbb;
+                                     transition:all .3s;
+                                     &::after {
+                                        content:'\21C0';
+                                        position:absolute;
+                                        top:1px;
+                                        right:5px;
+                                        color:#999;
+                                        font-size:14px;
+                                        opacity:0;
+                                        transition:all .3s;
+                                     }
+                                    }
+                                    &:hover {
+                                        span {
+                                            margin:0 0 0 5px;color:rgb(255, 81, 81);
+                                        &::after {right:0;color:#999;opacity:1;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                       } 
+                       .right {
+                        width:80.39936941671046%;
+                        display:flex;
+                        background:#fff;
+                         .slide-container {
+                            width:100%;
+                            position:relative;
+                            cursor:url(../images/mouse_cursor.png),move;
+                            .slide-view {
+                                width:100%;
+                                position:relative;
+                                overflow:hidden;
+                                z-index:1;
+                                .slide-wrap {
+                                    width:500%;
+                                    position:relative;
+                                    display:flex;
+                                    margin-left:-100%;
+                                    .slide {
+                                        width:80.39936941671046%;
+                                        height:100vh;
+                                        background:url() no-repeat 50% 50%;
+                                        background-size:cover;
+                                        position:relative;
+                                        &.slide1 {background-image:url(../images/sleptight_02.jpg);}
+                                        &.slide2 {background-image:url(../images/Layer14.png);}
+                                        &.slide3 {background-image:url(../images/charging_a3.jpg);}
+                                    }
+                                }                               
+                            }
+                            a.mouse-scrollBtn {
+                                width:27px;
+                                height:43px;
+                                position:absolute;
+                                bottom:40px;
+                                left:50%;
+                                z-index:2;
+                                cursor:pointer;
+                                background:url(../images/mouse.png) no-repeat 50% 50%;                      
+                                background-size:cover;
+                                filter:brightness(80%);
+                                transition:all .3s;
+                                &:hover {
+                                    animation: mousemove 1s forwards ease-in-out;
+                                }
+                                @keyframes mousemove {
+                                     0% {bottom:40px;opacity:1;}
+                                    50% {bottom:25px;opacity:1;}
+                                   100% {bottom:15px;opacity:0.5;}
+                                }
+                            }
+                            a.left-a {
+                                width:30px;
+                                height:30px;
+                                background:rgb(30, 26, 56);
+                                border-radius:15px;
+                                position:absolute;
+                                top:50%;
+                                left:30px;
+                                margin-top:-12.5px;
+                                z-index:3;
+                                cursor:pointer;
+                                i {
+                                    font-size:30px;color:#fff;
+                                }
+                            }
+                            a.right-a {
+                                width:30px;
+                                height:30px;
+                                background:rgb(30, 26, 56);
+                                border-radius:15px;
+                                position:absolute;
+                                top:50%;
+                                right:30px;
+                                margin-top:-12.5px;
+                                z-index:3;
+                                cursor:pointer;
+                                i {
+                                    font-size:30px;color:#fff;
+                                }
+                            }
+                         }
+                       }
+                    }
+                }
+            }
+        }
+        #section2 {
+            width:100%;
+            background:#fff;
+            overflow:hidden;
+            cursor:url(../images/mouse_cursor_point_red.png),move;
+            border-top:1px solid #eee;
+            border-bottom:1px solid #eee;
+            .container {
+                // max-width:71.78139779295849%;
+                width:100%;
+                max-width:1366px;
+                margin:0 auto;
+                .gap {
+                    width:100%;
+                    padding:8% 0;
+                    .wrap {
+                        width:100%;
+                        .title {
+                            width:100%;
+                            text-align:center;
+                            h2 {font-size:40px;font-weight:600;color:rgb(255, 81, 81);line-height:120px;}
+                            h3 {
+                                font-size:16px;font-weight:600;color:#555;line-height:30px;
+                                em {color:rgb(22, 19, 41);vertical-align:baseline;}
+                            }
+                            h4 {font-size:16px;font-weight:400;color:#555;line-height:40px;}
+                        }
+                        .content {
+                            width:100%;
+                            padding:4% 0 0 0;
+                            > ul {
+                                width:100%;
+                                display:flex;
+                                > li {
+                                    width:33.333%;
+                                    .col-gap {
+                                        margin:0 50px;
+                                        // margin: 0 3.660322108345534%;
+                                        .col-wrap {
+                                            width:100%;
+                                            position:relative;
+                                            transition:all .3s;
+                                            cursor:url(../images/mouse_cursor_white.png),move;
+                                            &::after {
+                                                content:'';
+                                                position:absolute;
+                                                bottom:0;
+                                                left:0;
+                                                z-index:2;
+                                                width:100%;
+                                                height:4px;
+                                                background:rgb(255, 81, 81);
+                                                transition:all .3s;
+                                            }
+                                            &:hover::after {
+                                                height:100%;
+                                                background:rgba(0,0,0, .5);
+                                            }
+                                            img {
+                                                width:100%;
+                                                position:relative;
+                                                z-index:1;
+                                                transition:all .3s;
+                                                filter:brightness(50%);
+                                            }
+                                            .caption {
+                                                width:100%;
+                                                height:100%;
+                                                position:absolute;
+                                                bottom:0;
+                                                left:0;
+                                                z-index:3;
+                                                display:flex;
+                                                ul {
+                                                    margin:auto;
+                                                    li {
+                                                        width:100%;
+                                                        padding:10px 0;
+                                                        text-align:center;
+                                                        cursor:url(../images/mouse_cursor_point_red.png),move;
+                                                        span {
+                                                            i {font-size:40px;color:#fff;padding:0 0 20px 0;}
+                                                        }
+                                                        h4 {
+                                                            font-size:16px;font-weight:600;
+                                                            color:#fff;
+                                                            
+                                                        }
+                                                        p {
+                                                            font-size:12px;
+                                                            font-weight:400;
+                                                            line-height:160%;
+                                                            color:#bbb;                 
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &:hover {
+                                                img {filter:brightness(30%);}
+                                                .caption {
+                                                    ul {
+                                                        li {
+                                                            span {
+                                                                i {
+                                                                    color:rgb(255, 81, 81);
+                                                                }
+                                                            }
+                                                            h4 {color:#fff;}
+                                                            p {color:#fff;}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        #section3 {
+            width:100%;
+            background:#fff;
+            overflow:hidden;
+            cursor:url(../images/mouse_cursor_point.png),move;
+            .container {
+                width:100%;
+                max-width:1366px;
+                margin:0 auto;
+                .gap {
+                    padding:9.5% 0 13.17715959004392% 0;
+                    .wrap {
+                        width:100%;
+                        .title {
+                            width:100%;
+                            text-align:center;
+                            h3 {font-size:16px;font-weight:600;color:#555;line-height:140%;}
+                            h2 {font-size:40px;font-weight:600;color:#232323;line-height:80px;}
+                        }
+                        .content {
+                            width:100%;
+                            padding:10.9809663250366% 0 0 0;
+                            ul {
+                                width:100%;
+                                display:flex;
+                                li {
+                                    width:25%;
+                                   .col-gap {
+                                    width:100%;
+                                     .col-wrap {
+                                        width:100%;
+                                        transition:all .3s;
+                                         .top {
+                                            width:100%;
+                                            position:relative;
+                                            background:#000;
+                                            > span {
+                                                width:100%;
+                                                position:relative;
+                                                z-index:1;
+                                                i {
+                                                    display:block;
+                                                    width:100%;
+                                                    height:1px;
+                                                    background:#ccc;
+                                                }
+                                            }
+                                            .icon-box {
+                                                width:56px;
+                                                height:56px;
+                                                position:absolute;
+                                                top:-23px;
+                                                left:50%;
+                                                margin-left:-23px;
+                                                z-index:2;
+                                                .bg-circle {
+                                                    position:relative;
+                                                    z-index:2;
+                                                    display:flex;
+                                                    width:56px;height:56px;
+                                                    background:#fff;
+                                                    box-shadow:0px 0px 10px rgba(0,0,0, .3);
+                                                    border-radius:50%;
+                                                    justify-content:center;
+                                                    align-items:center;
+                                                    .text {
+                                                        font-size:20px;
+                                                        font-weight:600;
+                                                        text-align:center;
+                                                        color:#232323;
+                                                    }
+                                                }
+                                                .bg-circle-grad {
+                                                    position:absolute;
+                                                    top:0;
+                                                    left:0;
+                                                    z-index:1;
+                                                    display:block;
+                                                    width:56px;height:56px;
+                                                    transform:scale(.9);
+                                                    background-image:linear-gradient(90deg, #B93C90 0%, #5412AE 100%);
+                                                    border-radius:50%;
+                                                    margin:auto;
+                                                    transition:all .3s;
+                                                }
+                                                .bg-circle-line {
+                                                    position:absolute;
+                                                    top:0;
+                                                    left:0;
+                                                    z-index:1;
+                                                    display:block;
+                                                    width:56px;height:56px;
+                                                    transform:scale(.9);
+                                                    border:1px solid rgb(197, 191, 212);
+                                                    border-radius:50%;
+                                                    margin:auto;
+                                                    transition:all .3s;
+                                                }
+                                            }
+                                         }
+                                         .bottom {
+                                            width:100%;
+                                            padding:60px 0 0 0;
+                                            text-align:center;
+                                            h4 {
+                                                font-size:15px;
+                                                font-weight:600;
+                                                line-height:40px;
+                                                color:#B93C90;
+                                            }
+                                            p {
+                                                font-size:15px;
+                                                font-weight:400;
+                                                line-height:160%;
+                                                color:#828282;
+                                            }
+                                         }
+                                         &:hover {
+                                            .top {
+                                                .icon-box {
+                                                    .bg-circle-grad {
+                                                        animation: circle .3s forwards ease-in-out;
+                                                    }
+                                                    .bg-circle-line {
+                                                        animation: circle2 1s forwards ease-in-out;
+                                                    }
+                                                    @keyframes circle {
+                                                          0% {transform:scale(.9);}
+                                                        100% {transform:scale(1.3);}
+                                                    }
+                                                    @keyframes circle2 {
+                                                        0% {transform:scale(.9);}
+                                                      50% {transform:scale(1.8);}
+                                                      100% {transform:scale(1.8);opacity:0;}
+                                                  }
+                                                }
+                                            }
+                                         }
+                                     }
+                                   } 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section4 {
+            width:100%;
+            background:#fff;
+            cursor:url(../images/mouse_cursor_point_red.png),move;
+            .container {
+                width:100%;
+                .gap {
+                    .wrap {
+                        width:100%;
+                        .content {
+                            width:100%;
+                            position:relative;
+                            img {
+                                width:100%;
+                                height:100%;
+                                position:relative;
+                                z-index:1;
+                            }
+                            .text-box {
+                                width:100%;
+                                height:100%;
+                                position:absolute;
+                                z-index:2;
+                                top:0;
+                                left:0;
+                                background:rgba(22, 19, 41, .1);
+                                display:flex;
+                                transition:all 1s;
+                                ul {
+                                    padding:40px 14.10930110352076%;
+                                    margin:auto 0;
+                                    li {
+                                        padding:10px 0;
+                                        position:relative;
+                                        > i {display:block;width:48%;height:2px;background:rgb(255, 81, 81);}
+                                        h3 {font-size:40px;font-weight:600;color:#fff;text-align:left;line-height:60px;}
+                                        a {
+                                            position:relative;
+                                            z-index:1;
+                                            display:block;
+                                            width:30px;
+                                            height:30px;
+                                            border-radius:15px;
+                                            transition:all .6s;
+                                            background:rgb(255, 81, 81);
+                                        }
+                                        h4 {
+                                            position:absolute;
+                                            top:10px;
+                                            left:10px;
+                                            z-index:2;
+                                            display:block;
+                                            cursor:pointer;
+                                            font-size:12px;font-weight:500;line-height:30px;
+                                            color:#fff;text-align:center;
+                                            transition:all .6s;
+                                        }
+                                        &:last-child:hover {
+                                            a {
+                                                width:130px;
+                                                height:30px;
+                                                border-radius:15px;
+                                            }
+                                            h4 {left:30px;}
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .text-box {
+                                    background:rgba(22, 19, 41, .9);
+                                    ul {
+                                        li {
+                                            > i {
+                                                animation: iTag 1s forwards ease-in-out;
+                                            }
+                                            @keyframes iTag {
+                                                0% {width:0;}
+                                                60% {width:60%;}
+                                                100% {width:48%;}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                         }
+                    }
+                }
+            }
+
+        }
+        #section5 {
+            width:100%;
+            background:#fff;
+            overflow:hidden;
+            cursor:url(../images/mouse_cursor_point.png),move;
+            .container {
+                width:100%;
+                max-width:1366px;
+                margin:0 auto;
+                .gap {
+                    margin:30px 0;
+                    width:100%;
+                    padding:80px 0;
+                    .wrap {
+                        width:100%;
+                        .content {
+                            width:100%;
+                            > ul {
+                                width:100%;
+                                display:flex;
+                                > li {
+                                    width:25%;
+                                   .bg-line {
+                                        display:none;
+                                        width:100%;
+                                        position:relative;
+                                        span {
+                                            z-index:1;
+                                            display:block;
+                                            width:100%;
+                                            height:2px;
+                                            background:#ccc;
+                                            position:absolute;
+                                            &.barT {top:0;left:0;}
+                                            &.barR {width:2px;height:302px;top:0;right:0;}
+                                            &.barB {bottom:-302px;left:0;}
+                                            &.barL {width:2px;height:302px;top:0;left:0;}
+                                        }
+                                   }
+                                   .bg-line.front {
+                                       display:none;
+                                        span {
+                                            z-index:2;
+                                            display:block;
+                                            width:100%;
+                                            height:2px;
+                                            background:rgb(255,81,81);
+                                            position:absolute;
+                                            opacity:0;
+                                            &.barT.play {top:0;left:0;}
+                                            &.barR.play {width:2px;height:302px;top:0;right:0;}
+                                            &.barB.play {bottom:-302px;left:0;}
+                                            &.barL.play {width:2px;height:302px;top:0;left:0;}
+                                        }
+                                   }
+                                   .col-gap {
+                                    margin:0 15px;
+                                        .col-wrap {
+                                            width:100%;
+                                            ul {
+                                                padding:50px 30px;
+                                                li {
+                                                    width:100%;
+                                                    padding:15px 0;
+                                                    transform:translateY(20px);
+                                                    text-align:center;
+                                                    transition:all .3s ease-in-out;
+                                                    i {display:block;font-size:50px;color:#ccc;transition:all .3s;}
+                                                    h4 {font-size:20px;font-weight:600;color:#232323;}
+                                                    p {
+                                                        font-size:14px;
+                                                        font-weight:500;
+                                                        line-height:150%;
+                                                        color:#aaa;
+                                                        opacity:0;
+                                                        transition:all .3s;
+                                                    }
+                                                }
+                                            }
+                                            &:hover {
+                                                ul {
+                                                    li {
+                                                        transform:translateY(0);
+                                                        i {color:rgb(255, 81, 81);}
+                                                        p {opacity:1;}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                   } 
+                                   &:hover {
+                                    .bg-line.front {
+                                        span {
+                                            opacity:1;
+                                            &.barT.play {animation: barT 1s forwards ease-in-out;}
+                                            &.barR.play {animation: barR 1s forwards ease-in-out;}
+                                            &.barB.play {animation: barB 1s forwards ease-in-out;transform:rotate(180deg);}
+                                            &.barL.play {animation: barL 1s forwards ease-in-out;}
+                                            @keyframes barT {
+                                                  0% {width:0;}
+                                                25% {width:100%;}
+                                            }
+                                            @keyframes barR {
+                                                0% {height:0;}
+                                                25% {height:0;}
+                                                50% {height:302px;}
+                                            }
+                                            @keyframes barB {
+                                                0% {width:100%;opacity:0;}
+                                                25% {width:100%;opacity:0;}
+                                                50% {width:100%;opacity:1;}
+                                                75% {width:-50%;opacity:1;}
+                                               100% {width:0;opacity:1;}
+                                            }
+                                        }
+                                    }
+                                   }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section6 {
+            width:100%;
+            background:#fff;
+            overflow:hidden;
+            position:relative;
+            cursor:url(../images/mouse_cursor_point_red.png),move;
+            .container {
+                width:100%;
+                max-width:1366px;
+                margin:0 auto;
+                padding:100px 0;
+                .gap {
+                    margin:0;
+                    width:100%;
+                    padding:40px 0;
+                    .wrap {
+                        width:100%;
+                        display:flex;
+                        .left-nav {
+                            width:21.96193265007321%;
+                            h2 {
+                                font-size:30px;
+                                font-weight:600;
+                                color:#232323;
+                                padding:0 0 70px 25px;
+                                position:relative;
+                                z-index:2;
+                                transition:all .3s;
+                                &::before {
+                                    content:'';
+                                    width:15px;
+                                    height:15px;
+                                    background:rgb(255, 81, 81);
+                                    border:0;
+                                    border-radius:50%;
+                                    position:absolute;
+                                    top:0;
+                                    left:0;
+                                    z-index:1;
+                                    transition:all .3s;
+                                }
+                                &:hover {
+                                    cursor:url(../images/mouse_cursor_point.png),move;
+                                    padding-left:40px;
+                                    &::before {top:7.5px;transform:scale(2);}
+                                }
+                            }
+                            .nav {
+                                width:100%;
+                                ul {
+                                    li {
+                                        padding:8px 0;
+                                        &:first-child {
+                                            > a {
+                                                position:relative;
+                                                span {
+                                                    color:#232323;font-weight:500;
+                                                  }
+                                                  i.all {
+                                                    display:block;width:35px;height:2px;background:rgb(255, 81, 81);position:absolute;left:0;bottom:-2px;
+                                                    transition:all .3s;
+                                                    }
+                                                }       
+                                        }
+                                        a {
+                                            display:block;
+                                            transition:all .3s;
+                                            cursor:url(../images/mouse_cursor_point_red.png),move;
+                                            span {
+                                                font-size:14px;
+                                                font-weight:400;
+                                                line-height:20px;
+                                                color:#707070;
+                                                transition:all .3s;
+                                            }
+                                            &:hover {
+                                                span {margin-left:8px;color:#232323;font-weight:600;}
+                                            }
+                                            &.on {
+                                                span {margin-left:8px;color:#232323;font-weight:600;}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            #cubeSection {
+                                padding:80px 0;
+                                .container {
+                                  width:100%;
+                                  margin:0 auto;
+                                  text-align:center;
+                                  .cube {
+                                    top:0;  
+                                    width:100px;
+                                    height:100px;
+                                    margin:150px auto 150px 30px;
+                                    position:absolute;
+                                    transform-style:preserve-3d;
+                                    transform:perspective(300px) rotate3d(-.2, 1, -1, 60deg);        // front 
+                                    // transform:perspective(800px) rotate3d(0, 1, 0.8, -180deg);  // back
+                                    // transform:perspective(800px) rotate3d(0, 1, 0.8, 90deg);    // left
+                                    // transform:perspective(800px) rotate3d(0, 1, 0.8, -90deg);   // right
+                                    // transform:perspective(800px) rotate3d(1, 0, 0.8, -90deg);   // top
+                                    // transform:perspective(800px) rotate3d(1, 0, 0.8, 90deg);    // bottom
+                                    transition:all 1s;
+                                    .face {
+                                      display:flex;
+                                      align-items:center;
+                                      justify-content:center;
+                                      width:100%;
+                                      height:100%;
+                                      background:url() no-repeat 50% 50%;
+                                      background-size:cover;
+                                      position:absolute;
+                                      border-radius:2px;
+                                      &.WORK01  {background-image:url(../images/gallery_02.png);transform:rotateY(0deg) translateZ(50px);}
+                                      &.WORK02  {background-image:url(../images/gallery_04.png);transform:rotateY(180deg) translateZ(50px);}
+                                      &.WORK03  {background-image:url(../images/gallery_01.png);transform:rotateY(-90deg) translateZ(50px);}
+                                      &.WORK04  {background-image:url(../images/gallery_05.png);transform:rotateY(90deg) translateZ(50px);}
+                                      &.WORK05  {background-image:url(../images/gallery_06.png);transform:rotateX(90deg) translateZ(50px);}
+                                      &.WORK06  {background-image:url(../images/gallery_03.png);transform:rotateX(-90deg) translateZ(50px);}
+                                    }
+                                  }
+                                  &.on {animation: show 2.3s forwards ease-in-out;}
+                                  @keyframes show {
+                                        0% {transform:translateX(-500px);opacity:0;}
+                                      100% {transform:translateX(0);opacity:1;}
+                                  }
+                                }
+                            }
+
+                            #cubeSection.rotate .container .cube {
+                                transform:perspective(300px) rotate3d(-.2, 1, -1, 60deg);     
+                             }
+                             #cubeSection.rotate1 .container .cube {
+                                transform:perspective(300px) rotate3d(-.3, 1, 0.2, -160deg);    
+                             }
+                             #cubeSection.rotate2 .container .cube {
+                                transform:perspective(300px) rotate3d(0, 1, .5, 90deg);  
+                             }
+                             #cubeSection.rotate3 .container .cube {
+                                transform:perspective(300px) rotate3d(0.1, 1, 1, 270deg);    
+                             }
+                             #cubeSection.rotate4 .container .cube {
+                                transform:perspective(300px) rotate3d(-1, -1, 1, -270deg);   
+                             }
+                             #cubeSection.rotate5 .container .cube {
+                                transform:perspective(300px) rotate3d(1, -0.3, 0, 120deg);     
+                             }
+
+                        }
+                        .right-gallery {
+                            width:78.03806734992679%;
+                            padding:100px 0 0 50px;
+                            ul {
+                                width:100%;
+                                height: calc(508px*1.02459*3);
+                                position:relative;
+                                li {
+                                    width:50%;
+                                    height: calc(508px*1.02459);
+                                    position:absolute;
+                                    transition:all .3s;
+                                    &:nth-child(1) {left:calc(50%*0);top:calc(508px*1.02459*0)}
+                                    &:nth-child(2) {left:calc(50%*1);top:calc(508px*1.02459*0)}
+                                    &:nth-child(3) {left:calc(50%*0);top:calc(508px*1.02459*1)}
+                                    &:nth-child(4) {left:calc(50%*1);top:calc(508px*1.02459*1)}
+                                    &:nth-child(5) {left:calc(50%*0);top:calc(508px*1.02459*2)}
+                                    &:nth-child(6) {left:calc(50%*1);top:calc(508px*1.02459*2)}
+                                    .col-gap {
+                                        width: auto;
+                                        margin:10px;
+                                        .col-wrap {
+                                            width:100%;
+                                            position:relative;
+                                            overflow:hidden;
+                                            img {
+                                                width:100%;
+                                                position:relative;
+                                                z-index:1;
+                                                transition:all .3s;
+                                            }
+                                            .text-box {
+                                                width:100%;
+                                                height:100%;
+                                                position:absolute;
+                                                top:0;
+                                                left:0;
+                                                z-index:2;
+                                                a {
+                                                    display:block;
+                                                    width:100%;
+                                                    height:100%;
+                                                    display:flex;
+                                                    background:rgba(255,255,255, 0);
+                                                    transition:all .3s;
+                                                    .text-wrap {
+                                                        text-align:center;
+                                                        margin:auto;
+                                                        opacity:0;
+                                                        transition:all .3s;
+                                                        h3 {font-size:20px;font-weight:600;color:rgb(255, 81, 81);padding:0 0 7px 0;border-bottom:2px solid rgb(255, 81, 81);}
+                                                        h4 {font-size:14px;color:#232323;padding:7px 0 0 0;}
+                                                    }
+                                                }
+                                            }
+                                            &:hover {       
+                                                img {transform:scale(1.1);}
+                                                .text-box {
+                                                    a {
+                                                        cursor:url(../images/plus_cursor.png),move;
+                                                        background:rgba(255,255,255, .6);
+                                                    }
+                                                    .text-wrap {
+                                                        opacity:1;
+                                                    }
+                                                }
+                                            }
+                                        }    
+                                    } 
+                                    &.zoomin {
+                                        .col-gap {
+                                            .col-wrap {
+                                                img {transform:scale(1.1);}
+                                            }
+                                        }                                      
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #section7 {
+            width:100%;
+            height:1070px;
+            cursor:url(../images/mouse_cursor_point_red.png),move;
+            .content {
+                width:100%;
+                height:100%;
+                .main-video {
+                    width:100%;
+                    height:auto;
+                }
+            }
+
+        }
+        #section8 {
+            width:100%;
+            background:rgb(245, 245, 245);
+            overflow:hidden;
+            cursor:url(../images/mouse_cursor_point.png),move;
+            .container {
+                width:100%;
+                max-width:1366px;
+                margin:0 auto;
+                padding:120px 0;
+                .gap {
+                    width:100%;
+                    margin:0;
+                    .wrap {
+                        width:100%;
+                        .title {
+                            width:100%;
+                            text-align:center;
+                            h3 {font-size:16px;font-weight:600;color:#555;line-height:140%;}
+                            h2 {font-size:40px;font-weight:600;color:#232323;line-height:80px;}
+                        }
+                        .content {
+                            width:100%;
+                            padding:80px 0 0 0;
+                            ul {
+                                width:100%;
+                                display:flex;
+                                li {
+                                    width:25%;
+                                  .col-gap {
+                                    margin:0 15px;
+                                    .col-wrap {
+                                        width:100%;
+                                        > a {
+                                            width:100%;
+                                            display:block;
+                                            overflow:hidden;
+                                            position:relative;
+                                            cursor:url(../images/mouse_cursor_point_red.png),move;
+                                            img {
+                                                width:100%;
+                                                transition:all .3s;
+                                                position:relative;
+                                                z-index:1;
+                                            }
+                                            &:after {content:'';width:100%;height:2px;background:rgb(255, 81, 81);position:absolute;bottom:0;left:0;z-index:2;transition:all .2s;}
+                                            &:hover {
+                                                img {transform:scale(1.1);}
+                                                &:after {height:100%;opacity:.5;}
+                                            }
+                                        }
+                                        .text-box {
+                                            padding:35px 0 0 0;
+                                            .subtitle {
+                                                width:100%;
+                                                height:58.781px;
+                                                h2 {
+                                                    font-size:14px;font-weight:500;line-height:140%;
+                                                    a {
+                                                        color:#232323;
+                                                        transition:all .3s;
+                                                        cursor:url(../images/mouse_cursor_point.png),move;
+                                                        &:hover {color:rgb(255, 81, 81);}
+                                                    }
+                                                }
+                                            }    
+                                            .subcontent {
+                                                width:100%;
+                                                padding:20px 0 0 0;
+                                                p {font-size:13px;font-weight:400;color:#6f6f6f;line-height:150%;}
+                                            }                                                                           
+                                        }
+                                    }
+                                  }  
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        #section9 {
+            width:100%;
+            background:#fff;
+            overflow:hidden;
+            cursor:url(../images/mouse_cursor_point_red.png),move;
+            .container {
+                width:100%;
+                max-width:1366px;
+                margin:0 auto;
+                padding:100px 0;
+                .gap {
+                    margin:0;
+                    width:100%;
+                    .wrap {
+                        width:100%;
+                        display:flex;
+                        .left {
+                            width:50%;
+                            height:100%;
+                            .top {
+                                width:50%;
+                                position:relative;
+                                h2 {
+                                    font-size:30px;
+                                    font-weight:600;
+                                    color:#232323;
+                                    padding:0 0 40px 25px;
+                                    position:relative;
+                                    z-index:2;
+                                    transition:all .3s;
+
+                                    &::before {
+                                    content:'';
+                                    width:15px;
+                                    height:15px;
+                                    background:rgb(255, 81, 81);
+                                    border:0;
+                                    border-radius:50%;
+                                    position:absolute;
+                                    top:0;
+                                    left:0;
+                                    z-index:1;
+                                    transition:all .3s;
+                                    }
+                                    
+                                    &:hover {
+                                        cursor:url(../images/mouse_cursor_point.png),move;
+                                        padding-left:40px;
+                                        &::before {top:7.5px;transform:scale(2);}
+                                    }
+                                }
+                                span {
+                                    display:block;
+                                    width:100%;
+                                    padding:20px 0 0 25px;
+                                    display:flex;
+                                    i {font-size:40px;color:#ccc;}
+                                    h3 {font-size:14px;margin:auto auto auto 20px;line-height:20px;}
+                                }
+                            }
+                            .bottom {
+                                width:100%;
+                                padding:30px 0 30px 25px;
+                                form {
+                                    width:100%;
+                                    ul {
+                                        width:100%;
+                                        li {
+                                            width:100%;
+                                            padding:10px 0;
+                                            letter-spacing:0.5px;
+                                            input {
+                                                width:550px;
+                                                height:50px;
+                                                background:#fff;
+                                                border:1px solid #ccc;
+                                                border-radius:3px;
+                                                padding:0 0 0 15px;
+                                                color:#777;
+                                                font-size:15px;
+                                                font-weight:400;
+                                                &::placeholder {color:#aaa;font-size:14px;}
+                                                &:focus {outline:2px solid rgba(255, 81, 81, .2);outline-offset:-2px;}
+                                                &#message {
+                                                    height:80px;
+                                                }
+                                            }
+                                            select {
+                                                width:550px;
+                                                height:50px;
+                                                background:#fff;
+                                                border:1px solid #ccc;
+                                                border-radius:3px;
+                                                color:#aaa;
+                                                font-size:15px;
+                                                padding:0 0 0 15px;
+                                                &::placeholder {color:#aaa;font-size:14px;}
+                                                &:focus {outline:2px solid rgba(255, 81, 81, .2);outline-offset:-2px;}
+                                            }
+                                            button {
+                                                width:120px;
+                                                height:45px;
+                                                background:#eee;
+                                                border:1px solid #ccc;
+                                                border-radius:3px;
+                                                font-size:13px;
+                                                font-weight:400;
+                                                color:#999;
+                                                letter-spacing:.8px;
+                                                transition:all .3s;
+                                                cursor:url(../images/mouse_cursor_point.png),move;
+                                                &:hover {
+                                                    color:#fff;
+                                                    background:rgb(255, 81, 81);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            width:50%;
+                            height:565px;
+                            .bg-box {
+                                width:100%;
+                                height:100%;
+                                display:flex;
+                                img {
+                                    width:683px;
+                                    margin:auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        
+        //패럴럭스 애니메이션
+
+        #section2.sec2Ani .container .gap .wrap .title {animation: sec2ani1 2s forwards ease-in-out;}
+        #section2.sec2Ani .container .gap .wrap .content > ul > li:nth-child(1) {animation: sec2ani2 2.3s forwards ease-in-out;}
+        #section2.sec2Ani .container .gap .wrap .content > ul > li:nth-child(2) {animation: sec2ani3 2.6s forwards ease-in-out;}
+        #section2.sec2Ani .container .gap .wrap .content > ul > li:nth-child(3) {animation: sec2ani4 2.9s forwards ease-in-out;}
+
+        @keyframes sec2ani1 {
+              0% {transform:translateY(500px);opacity:0;}
+            100% {transform:translateY(0);opacity:1;}
+        }
+        @keyframes sec2ani2 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+        }
+        @keyframes sec2ani3 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+        }
+        @keyframes sec2ani4 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+        }
+
+        #section3.sec3Ani .container .gap .wrap .title {animation: sec3ani1 2s forwards ease-in-out;}
+        #section3.sec3Ani .container .gap .wrap .content {animation: sec3ani2 2.3s forwards ease-in-out;}
+
+        
+        @keyframes sec3ani1 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec3ani2 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+
+         #section4.sec4Ani .container .gap .wrap .content .text-box ul {animation: sec4ani1 2s forwards ease-in-out;}
+
+         @keyframes sec4ani1 {
+            0% {transform:translateX(-500px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+
+         #section5.sec5Ani .container .gap .wrap .content > ul > li:nth-child(1) {animation: sec5ani1 2s forwards ease-in-out;}
+         #section5.sec5Ani .container .gap .wrap .content > ul > li:nth-child(2) {animation: sec5ani2 2.3s forwards ease-in-out;}
+         #section5.sec5Ani .container .gap .wrap .content > ul > li:nth-child(3) {animation: sec5ani3 2.6s forwards ease-in-out;}
+         #section5.sec5Ani .container .gap .wrap .content > ul > li:nth-child(4) {animation: sec5ani4 2.9s forwards ease-in-out;}
+
+         @keyframes sec5ani1 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec5ani2 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec5ani3 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec5ani4 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+
+         #section6.sec6Ani .container .gap .wrap .left-nav h2 {animation: sec6ani1 2s forwards ease-in-out;}
+         #section6.sec6Ani .container .gap .wrap .left-nav .nav {animation: sec6ani2 2.3s forwards ease-in-out;}
+
+         #section6.sec6Ani .container .gap .wrap .right-gallery ul li:nth-child(1) {animation: sec6ani3 2.4s forwards ease-in-out;}
+         #section6.sec6Ani .container .gap .wrap .right-gallery ul li:nth-child(3) {animation: sec6ani4 2.6s forwards ease-in-out;}
+         #section6.sec6Ani .container .gap .wrap .right-gallery ul li:nth-child(5) {animation: sec6ani5 2.8s forwards ease-in-out;}
+
+         #section6.sec6Ani .container .gap .wrap .right-gallery ul li:nth-child(2) {animation: sec6ani6 3s forwards ease-in-out;}
+         #section6.sec6Ani .container .gap .wrap .right-gallery ul li:nth-child(4) {animation: sec6ani7 3.2s forwards ease-in-out;}
+         #section6.sec6Ani .container .gap .wrap .right-gallery ul li:nth-child(6) {animation: sec6ani8 3.4s forwards ease-in-out;} 
+
+
+         @keyframes sec6ani1 {
+            0% {transform:translateX(-500px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani2 {
+            0% {transform:translateX(-500px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani3 {
+            0% {transform:translateX(1000px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani4 {
+            0% {transform:translateX(1000px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani5 {
+            0% {transform:translateX(1000px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani6 {
+            0% {transform:translateX(1000px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani7 {
+            0% {transform:translateX(1000px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec6ani8 {
+            0% {transform:translateX(1000px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+
+
+         #section7.sec7Ani .content .main-video {animation: sec7ani1 2s forwards ease-in-out;}
+
+         @keyframes sec7ani1 {
+                0% {opacity:0;}
+            100% {opacity:1;}
+         }
+
+
+
+         #section8.sec8Ani .container .gap .wrap .title {animation: sec8ani1 2s forwards ease-in-out;}
+         #section8.sec8Ani .container .gap .wrap .content ul li:nth-child(1) {animation: sec8ani2 2.3s forwards ease-in-out;}
+         #section8.sec8Ani .container .gap .wrap .content ul li:nth-child(2) {animation: sec8ani3 2.6s forwards ease-in-out;}
+         #section8.sec8Ani .container .gap .wrap .content ul li:nth-child(3) {animation: sec8ani4 2.9s forwards ease-in-out;}
+         #section8.sec8Ani .container .gap .wrap .content ul li:nth-child(4) {animation: sec8ani5 3.1s forwards ease-in-out;}
+
+         @keyframes sec8ani1 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec8ani2 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec8ani3 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec8ani4 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec8ani5 {
+            0% {transform:translateY(800px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+
+
+         #section9.sec9Ani .container .gap .wrap .left .top h2 ,
+         #section9.sec9Ani .container .gap .wrap .left .top h2::before
+          {animation: sec9ani1 2s forwards ease-in-out;}
+
+         #section9.sec9Ani .container .gap .wrap .left .top span {animation: sec9ani2 2.3s forwards ease-in-out;}
+         #section9.sec9Ani .container .gap .wrap .left .bottom {animation: sec9ani3 2.6s forwards ease-in-out;}
+         #section9.sec9Ani .container .gap .wrap .right .bg-box img {animation: sec9ani4 2.6s forwards ease-in-out;}
+
+
+         @keyframes sec9ani1 {
+            0% {transform:translateY(500px);opacity:0;}
+          100% {transform:translateY(0);opacity:1;}
+         }
+         @keyframes sec9ani2 {
+            0% {transform:translateX(-800px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec9ani3 {
+            0% {transform:translateX(-800px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+         @keyframes sec9ani4 {
+            0% {transform:translateX(800px);opacity:0;}
+          100% {transform:translateX(0);opacity:1;}
+         }
+
+
+
+    }
+    #footer {
+        z-index:1;
+        position:relative;
+        width:100%;
+        background:rgb(22, 19, 41);
+        padding:80px 0;
+        cursor:url(../images/mouse_cursor_white.png),move;
+        .container {
+            width:1366px;
+            height:100%;
+            margin:0 auto;
+            .gap {
+                width:100%;
+                margin:0;
+                .wrap {
+                    width:100%;
+                    .top {
+                        width:100%;
+                        ul {
+                            width:100%;
+                            display:flex;
+                            li {
+                                width:33.333%;
+                                .col-gap {
+                                    margin:0 30px;
+                                    .col-wrap {
+                                        width:100%;
+                                        h2 {
+                                            font-size:20px;color:#777;font-weight:600;height:50px;line-height:25px;
+                                            a {
+                                                color:#777;
+                                                vertical-align:baseline;
+                                                transition:all .3s;
+                                                cursor:url(../images/mouse_cursor_white.png),move;
+                                                &:hover {color:rgb(255, 81, 81);}
+                                            }
+                                        }
+                                        address {
+                                            font-size:13px;color:#777;font-weight:500;height:50px;line-height:16px;
+                                            a {
+                                                color:#777;
+                                                vertical-align:baseline;
+                                                transition:all .3s;
+                                                cursor:url(../images/mouse_cursor_white.png),move;
+                                                &:hover {color:rgb(255, 81, 81);}
+                                            }
+                                        }
+                                        h1 {
+                                            text-align:right;
+                                            img {width:150px;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .bottom {
+                        width:100%;
+                        padding:40px 0 0 0;
+                        ul {
+                            width:100%;
+                            display:flex;
+                            li {
+                                width:50%;
+                                .col-gap {
+                                    margin:0 30px;
+                                    .col-wrap {
+                                        h3 {
+                                            font-size:13px;color:#777;font-weight:500; 
+                                            a {
+                                                color:#777;vertical-align:baseline;
+                                                transition:all .3s;
+                                                cursor:url(../images/mouse_cursor_white.png),move;
+                                                &:hover {color:rgb(255, 81, 81);}
+                                            }
+                                            span {margin:0 5px;vertical-align:baseline;}
+                                        }
+                                        p {
+                                            font-size:13px;color:#777;font-weight:500;text-align:right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #goTopBox {
+        display:none;
+        z-index:4;
+        position:fixed;
+        bottom:40px;
+        right:40px;
+        width:35px;
+        height:35px;
+        a {
+          display:block;
+          width:100%;
+          height:100%;
+          margin:auto;
+          background:#fff;
+          border-radius:50%;
+          box-shadow:0 0 5px rgba(0,0,0, .3);
+          transition:all .3s;
+          i {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            height:100%;
+            font-size:16px;
+            font-weight:300;
+            color:rgba(30, 26, 56, .8);
+            transition:all .3s;
+          }
+          &:hover {
+            background:rgb(30, 26, 56);
+            i {color:#fff;}
+          }
+        }
+      }
+
+      #quickBox {
+        position:absolute;
+        z-index:4;
+        top:120px;
+        right:-130px;
+        width:150px;
+        height:40px;
+        background:transparent;
+        transition:all .3s;
+        cursor:pointer;
+        .contents {
+            width:100%;
+            height:100%;
+            background:transparent;
+            a {
+                display:block;
+                width:100%;
+                height:100%;
+                background:rgb(255, 81, 81);
+                border-radius:20px 0 0 20px;
+                i {
+                    width:20px;font-size:25px;color:#fff;line-height:40px;
+                    display:flex;cursor:pointer;
+                    span {
+                        font-family:'Montserrat';font-size:11px;font-weight:500;color:#fff;margin-left:7px;width:100%;
+                    }
+                }
+            }
+        }
+        &:hover {right:0;}
+      }
+    
+}

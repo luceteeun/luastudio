@@ -1,0 +1,152 @@
+
+@media all and (max-width:1730px){
+
+  #wrap #header .container .gap .wrap #logo {
+    margin: auto auto auto 4.545454545454545%;
+  }
+  #wrap #header .container .gap .wrap #aside {
+    margin: auto 4.545454545454545% auto 0;
+  }
+
+}
+
+@media all and (max-width:1370px){
+
+  #wrap #header .container .gap .wrap #logo {
+    margin: auto auto auto 4.545454545454545%;
+  }
+
+  #wrap #main #section2 .container .gap .wrap .content > ul > li .col-gap {
+    margin: 0 10%;
+  }
+
+}
+
+@media all and (max-width:1170px){
+
+  #wrap #main #section1 .container .gap .wrap .left > ul > li a span {
+    font-size: 12px;
+    &::after {
+      font-size:12px;
+    }
+  }
+
+  #wrap #main #section1 .container .gap .wrap .right .slide-container a.mouse-scrollBtn {
+    width: 27px;
+    height: 43px;
+    transform:scale(.7);
+    bottom: 20px;
+  }
+
+  #wrap #main #section3 .container .gap .wrap .content ul li .col-gap .col-wrap .bottom {
+    h4 {font-size: 13px;}
+    p {font-size: 13px;letter-spacing:-.5px;}
+  }
+
+}
+
+@media all and (max-width:960px){
+
+  #wrap #header .container .gap .wrap #nav {
+    display:none;
+  }
+
+  #wrap #main #section2 .container .gap .wrap .content > ul {
+    flex-flow:row wrap;
+    > li {
+      width:50%;
+      .col-gap {
+        margin:10%;
+      }
+    }
+  }
+
+  #wrap #main #section2 .container .gap .wrap .content > ul > li .col-gap .col-wrap .caption ul li {
+    span {
+      i {
+        font-size: 35px;
+        padding: 0 0 15px 0;
+      }
+    }
+    h4 {font-size: 15px;}
+    p {font-size: 11px;}
+  }
+
+  #wrap #main #section3 .container .gap .wrap .content ul li .col-gap .col-wrap .bottom {
+    h4 {font-size: 12px;}
+    p {font-size: 11px;letter-spacing:-.5px;}
+  }
+
+  #wrap #main #section4 .container .gap .wrap .content .text-box ul li {
+    padding:3px 0;
+    h3 {font-size: 32px;line-height:45px;}
+    a {width: 20px;height: 20px;border-radius:10px;}
+    h4 {font-size: 10px;line-height:20px;}
+  }
+
+}
+
+@media all and (max-width:750px){
+
+  #wrap #main #section3 .container .gap .wrap .content ul li .col-gap .col-wrap .bottom {
+    h4 {font-size: 11px;}
+    p {font-size: 10px;letter-spacing:-.5px;}
+  }
+
+}
+
+@media all and (max-width:650px){
+
+  #wrap #main #section3 .container .gap .wrap .content ul {
+    flex-flow:row wrap;
+    li {
+      width:50%;
+      .col-gap {
+        margin:40px 0;
+      }
+    }
+  }
+  
+  #wrap #main #section3 .container .gap .wrap .content ul li .col-gap .col-wrap .bottom {
+    h4 {font-size: 11px;}
+    p {font-size: 10px;letter-spacing:-.5px;}
+  }
+
+}
+
+
+@media all and (max-width:550px){
+
+  #wrap #main #section2 .container .gap .wrap .content > ul {
+    flex-flow:row wrap;
+    > li {
+      width:100%;
+      .col-gap {
+        margin:10%;
+      }
+    }
+  }
+
+  #wrap #main #section3 .container .gap .wrap .title {
+    h3 {font-size: 12px;}
+    h2 {font-size: 30px;}
+  }
+
+  #wrap #main #section3 .container .gap .wrap .content ul li .col-gap .col-wrap .bottom {
+    h4 {font-size: 10px;}
+    p {font-size: 9px;letter-spacing:-.5px;}
+  }
+
+  #wrap #main #section4 .container .gap .wrap .content .text-box ul li {
+    padding:3px 0;
+    h3 {font-size: 20px;line-height:20px;}
+    a {width: 10px;height: 10px;border-radius:5px;}
+    h4 {font-size: 8px;line-height:10px;}
+  }
+
+}
+
+@media all and (max-width:320px){
+
+
+}
